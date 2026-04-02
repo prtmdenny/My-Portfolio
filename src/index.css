@@ -1,0 +1,127 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 100%);
+  min-height: 100vh;
+}
+/* ==================== HEADER ==================== */
+.header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.header-logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+.header-logo img {
+  height: 55px;
+}
+.logo-text {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+}
+.logo-pratama {
+  color: #00aaff;
+}
+
+/* Navigasi */
+.header-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-list a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.header-list a:hover {
+  color: #00aaff;
+}
+
+/* Tombol Resume */
+.download-btn {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.download-btn:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+/* Mobile Menu */
+.mobile-nav {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-nav li {
+  margin: 15px 0;
+}
+.mobile-nav a {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.mobile-resume-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .header-container {
+    height: 70px;
+  }
+}
+
+/* ==================== HERO / HOME ==================== */
