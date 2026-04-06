@@ -24,7 +24,7 @@ body{
   position: relative;
 }
 
-/* ==================== LOGO DI TENGAH + HOVER EFFECT ==================== */
+/* ==================== Header Logo ==================== */
 .header-logo {
   position: absolute;
   left: 50%;
@@ -49,20 +49,20 @@ body{
   transform: scale(1.08);
 }
 
-/* Navigasi Kiri (Desktop) */
 .header-left .header-list {
   display: flex;
   gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Lora", serif;
 }
 
 .header-left .header-list a {
   text-decoration: none;
   color: #1a1a1a;
-  font-weight: 600;
+  font-family: Lora;
+  font-weight: 700;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
@@ -70,7 +70,7 @@ body{
   color: #00aaff;
 }
 
-/* Tombol Resume Kanan (Desktop) */
+/* Download Resume */
 .header-right .download-btn {
   background: #00aaff;
   color: white;
@@ -80,7 +80,8 @@ body{
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  font-family: "Lora", serif;
+  font-family: Lora;
+  font-size: 20px;
 }
 
 .header-right .download-btn:hover {
@@ -117,13 +118,13 @@ body{
 }
 
 .mobile-nav a {
+  font-family: Lora;
   font-size: 1.25rem;
   color: #1a1a1a;
   text-decoration: none;
   font-weight: 600;
   display: block;
   padding: 6px 0;
-  font-family: "Lora", serif;
 }
 
 .mobile-nav a:hover {
@@ -138,11 +139,12 @@ body{
   border: none;
   padding: 14px 20px;
   border-radius: 50px;
+  font-family: Lora;
   font-weight: 600;
   margin-top: 15px;
   cursor: pointer;
   transition: all 0.3s;
-  font-family: "Lora", serif;
+
 }
 
 .mobile-resume-btn:hover {
@@ -183,7 +185,6 @@ body{
 }
 
 /* ==================== HERO / HOME ==================== */
-/* ==================== HERO SECTION - 3 GAMBAR SEUKURAN 1 BARIS ==================== */
 .hero {
   min-height: 100vh;
   background: #ffffff;
@@ -225,9 +226,10 @@ body{
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25);
 }
 
-/* ==================== TEKS ==================== */
+/* ==================== TEXT ==================== */
 .hero-name {
   font-size: 4.3rem;
+  font-family: Lora;
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 20px;
@@ -240,6 +242,8 @@ body{
 }
 
 .hero-bio {
+  font-family: Montserrat;
+  font-weight: 600;
   font-size: 1.32rem;
   line-height: 1.7;
   color: #555;
@@ -247,7 +251,7 @@ body{
   margin: 0 auto 50px;
 }
 
-/* Tombol dan Social tetap sama */
+
 .hero-button {
   display: flex;
   gap: 18px;
@@ -324,4 +328,531 @@ body{
   .hero {
     padding: 80px 20px 60px;
   }
+}
+
+/* ==================== Skills Section ==================== */
+
+.skills-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 120px 20px 100px;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.skills-header h1 {
+  font-size: 3.6rem;
+  font-family: Lora;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.skills-header p {
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 28px;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.skill-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 170, 255, 0.15);
+}
+
+/* Icon di pojok kiri atas */
+.skill-icon {
+  width: 56px;
+  height: 56px;
+  background: #f0f7ff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover .skill-icon {
+  background: #00aaff;
+  color: white;
+  transform: scale(1.08);
+}
+
+.skill-card h3 {
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1a1a1a;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.skill-list li {
+  font-family: Lora;
+  font-weight: 500;
+  padding: 7px 0;
+  color: #444;
+  position: relative;
+  padding-left: 22px;
+}
+
+.skill-list li::before {
+  content: "•";
+  color: #00aaff;
+  position: absolute;
+  left: 0;
+  
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Progress Bar */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 9px;
+  background: #e5e7eb;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00aaff, #0088cc);
+  border-radius: 50px;
+  width: 0;
+  animation: progressFill 1.8s ease forwards;
+}
+
+.progress-text {
+  font-family: Lora;
+  font-weight: 700;
+  color: #00aaff;
+  min-width: 42px;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .skills-header h1 { font-size: 3rem; }
+  .skill-card { padding: 28px 24px; }
+}
+
+/* ==================== Projects Section ==================== */
+.projects-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 120px 20px 140px;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.projects-header h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.projects-header p {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grid Cards - Ukuran Sama */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  height: 100%; /* memastikan tinggi sama */
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 170, 255, 0.15);
+}
+
+/* Gambar di Card - Ukuran Sama */
+.project-image {
+  height: 240px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-content {
+  padding: 28px;
+}
+
+.project-content h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-category {
+  color: #00aaff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tech-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+.btn-view-details {
+  background: #00aaff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-view-details:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+
+/* ==================== MODAL WITH SWIPE & SCROLL ==================== */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 920px;
+  width: 95%;
+  max-height: 92vh;
+  overflow-y: auto;           /* Bisa scroll */
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* Gallery */
+.modal-gallery {
+  height: 460px;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.05);
+}
+
+/* Tombol Panah */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-btn.prev { left: 20px; }
+.gallery-btn.next { right: 20px; }
+
+/* Thumbnail */
+.thumbnail-container {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.thumbnail.active {
+  border-color: #00aaff;
+  transform: scale(1.1);
+}
+
+/* Modal Info */
+.modal-info {
+  padding: 40px;
+}
+
+.modal-info h2 {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.modal-category {
+  color: #00aaff;
+  font-weight: 600;
+}
+
+.modal-desc {
+  margin: 20px 0 30px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-github, .btn-demo {
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 1;
+  text-align: center;
+  min-width: 160px;
+}
+
+.btn-github {
+  background: #1a1a1a;
+  color: white;
+}
+
+.btn-github:hover {
+  background: #333;
+}
+
+.btn-demo {
+  background: #00aaff;
+  color: white;
+}
+
+.btn-demo:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    width: 98%;
+    margin: 10px;
+  }
+  .modal-gallery {
+    height: 360px;
+  }
+  .modal-info {
+    padding: 30px 20px;
+  }
+}
+/* ==================== MODAL ZOOM FEATURE ==================== */
+.modal-gallery {
+  height: 460px;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  cursor: zoom-in;
+}
+
+.modal-image.zoomed {
+  transform: scale(4.2);
+  /*Zoomlevel*/cursor: zoom-out;
+  -webkit-transform: scale(4.2);
+  -moz-transform: scale(4.2);
+  -ms-transform: scale(4.2);
+  -o-transform: scale(4.2);
+}
+
+/* Tombol Panah */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-btn.prev { left: 20px; }
+.gallery-btn.next { right: 20px; }
+
+/* Thumbnail */
+.thumbnail-container {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.thumbnail.active {
+  border-color: #00aaff;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
