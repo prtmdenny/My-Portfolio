@@ -229,7 +229,7 @@ body{
 /* ==================== TEXT ==================== */
 .hero-name {
   font-size: 4.3rem;
-  font-family: Lora;
+  font-family: Montserrat;
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 20px;
@@ -336,6 +336,7 @@ body{
   min-height: 100vh;
   background: #f8f9fa;
   padding: 120px 20px 100px;
+  font-family: Montserrat;
 }
 
 .skills-container {
@@ -350,9 +351,9 @@ body{
 
 .skills-header h1 {
   font-size: 3.6rem;
-  font-family: Lora;
+  font-family: Montserrat;
   font-weight: 800;
-  color: #1a1a1a;
+  color: #00aaff;
 }
 
 .skills-header p {
@@ -418,7 +419,7 @@ body{
 }
 
 .skill-list li {
-  font-family: Lora;
+  font-family: Montserrat;
   font-weight: 500;
   padding: 7px 0;
   color: #444;
@@ -460,7 +461,7 @@ body{
 }
 
 .progress-text {
-  font-family: Lora;
+  font-family: Montserrat;
   font-weight: 700;
   color: #00aaff;
   min-width: 42px;
@@ -482,6 +483,7 @@ body{
   min-height: 100vh;
   background: #f8f9fa;
   padding: 120px 20px 140px;
+  font-family: Montserrat;
 }
 
 .projects-container {
@@ -497,7 +499,7 @@ body{
 .projects-header h1 {
   font-size: 3.6rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: #00aaff;
   margin-bottom: 16px;
 }
 
@@ -720,6 +722,7 @@ body{
 .modal-category {
   color: #00aaff;
   font-weight: 600;
+  
 }
 
 .modal-desc {
@@ -816,6 +819,7 @@ body{
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  
   font-size: 24px;
   cursor: pointer;
   z-index: 10;
@@ -855,4 +859,185 @@ body{
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+
+/* ==================== Contact Section ==================== */
+.contact {
+  padding: 120px 20px 100px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-title {
+  font-family: Montserrat;
+  font-size: 3.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00aaff, #0088cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.contact-subtitle {
+  font-family: Montserrat;
+  font-size: 1.35rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+/* Container 2 Kolom */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info,
+.contact-form {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Kolom Kiri - Info */
+.contact-info {
+  animation-delay: 0.3s;
+}
+
+.contact-info h2 {
+  font-family: Montserrat;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.icon {
+  font-size: 28px;
+  width: 40px;
+}
+
+.info-item .label {
+  font-family: Montserrat;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.info-item a {
+  font-family: Montserrat;
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
+  transform: translateY(-4px);
+}
+
+/* Kolom Kanan - Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-family: Lora;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00aaff;
+  box-shadow: 0 0 0 4px rgba(0, 170, 255, 0.15);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.btn-send {
+  background: linear-gradient(90deg, #00aaff, #0088cc);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-family: Montserrat;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-send:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 170, 255, 0.4);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .contact-title {
+    font-size: 3rem;
+  }
+  
+  .contact {
+    padding: 100px 20px 80px;
+  }
 }

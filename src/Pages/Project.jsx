@@ -30,7 +30,8 @@ const projects = [
     description: "A modern portfolio website built with React.js featuring smooth animations, React Router, and fully responsive design.",
     images: [
       "/Portfolio/Hero.jpg",
-      "/Portfolio/Skills.jpg"
+      "/Portfolio/Skills.jpg",
+      "/Portfolio/Project.jpg"
     ],
     tech: ["React", "React Router", "Tailwind CSS"],
     github: "https://github.com/prtmdenny/My-Portfolio.git",
