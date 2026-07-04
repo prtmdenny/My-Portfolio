@@ -11,14 +11,21 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        
         {/* Navigasi Kiri - Desktop */}
         <nav className="header-left">
           <ul className="header-list">
-            <li><Link to="/">Hero</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/projects">Project</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li>
+              <Link to="/">Hero</Link>
+            </li>
+            <li>
+              <Link to="/skills">Skills</Link>
+            </li>
+            <li>
+              <Link to="/projects">Project</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </nav>
 
@@ -31,10 +38,7 @@ function Header() {
 
         {/* Tombol Resume - Desktop */}
         <div className="header-right">
-          <a 
-            href="/resume-Denny.pdf" 
-            download="Resume-Denny.pdf" target="_blank"
-          >
+          <a href="/resume-Denny.pdf" download="resume-Denny" target="_blank">
             <button className="download-btn">Download My Resume</button>
           </a>
         </div>
@@ -49,16 +53,32 @@ function Header() {
       {isMobileMenuOpen && (
         <nav className="mobile-nav">
           <ul>
-            <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
-            <li><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
-            <li><Link to="/projects" onClick={toggleMenu}>Project</Link></li>
-            <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+            <li>
+              <Link to="/" onClick={toggleMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/skills" onClick={toggleMenu}>
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" onClick={toggleMenu}>
+                Project
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={toggleMenu}>
+                Contact
+              </Link>
+            </li>
           </ul>
-          
+
           {/* Tombol Resume di Mobile Menu */}
-          <a 
-            href="/resume-Denny.pdf" 
-            download="Resume-Denny.pdf"
+          <a
+            href="/resume-Denny.pdf"
+            download="resume-Denny"
             target="_blank"
             onClick={toggleMenu}
           >
